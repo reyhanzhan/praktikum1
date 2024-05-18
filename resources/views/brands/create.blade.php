@@ -1,3 +1,6 @@
+@extends('layouts.main')
+
+@section('container')
 <div class="container">
     <h1>Create Brand</h1>
     <form method="POST" action="{{ route('brands.store') }}">
@@ -13,3 +16,4 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+@endsection

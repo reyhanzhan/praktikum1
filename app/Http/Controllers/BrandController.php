@@ -11,13 +11,15 @@ class BrandController extends Controller
     public function index()
     {
         $brands = Brand::all();
-        return view('brands', compact('brands'));
+        // dd($brands);
+        return view('brands.index', compact('brands'));
     }
 
     public function create()
     {
-        return view('create_brand');
+        return view('brands.create');
     }
+
 
     public function store(Request $request)
     {
@@ -28,11 +30,11 @@ class BrandController extends Controller
         return redirect()->route('brands.index');
     }
     
-    public function show($id)
-    {
-        $brand = Brand::findOrFail($id);
-        return view('brands.edit', compact('brand'));
-    }
+    // public function show($id)
+    // {
+    //     $brand = Brand::findOrFail($id);
+    //     return view('brands.edit', compact('brand'));
+    // }
     public function edit($id)
     {
         $brand = Brand::findOrFail($id);

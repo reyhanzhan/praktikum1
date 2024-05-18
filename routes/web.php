@@ -27,5 +27,7 @@ Route::get('/', function () {
 
 
 Route::resource('brands', BrandController::class);
-Route::resource('product-categories', ProductCategoryController::class);
+Route::resource('product_categories', ProductCategoryController::class);
 Route::resource('products', ProductController::class);
+
+// Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');

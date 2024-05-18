@@ -1,3 +1,6 @@
+@extends('layouts.main')
+
+@section('container')
 <div class="container">
     <h1>Edit Brand</h1>
     <form action="{{ route('brands.update', $brand->id) }}" method="POST">
@@ -14,3 +17,4 @@
         <button type="submit" class="btn btn-primary">Update Brand</button>
     </form>
 </div>
+@endsection
